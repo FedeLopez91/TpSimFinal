@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -53,47 +54,24 @@ namespace TpSimFinal
             {
                 e.Handled = true;
             }
-
-            //// If you want, you can allow decimal (float) numbers
-            //if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
-            //{
-            //    e.Handled = true;
-            //}
         }
 
         private void calcularDivisionPresupuesto(object sender, EventArgs e)
         {
-            this.lblCantPres1.Text = "1";
-            this.lblCantPres2.Text = "2";
-            this.lblCantPres3.Text = "3";
-            this.lblCantPres4.Text = "4";
 
-            //for (int i = 0; i < 4; i++)
-            //{
-            //    var name = string.Format("lblCantPres{0}", i);
-            //    //if (this.Controls.ContainsKey(name))
-            //    //{
-            //        var currentLabel = this.Controls[name] as Label;
-            //        if (currentLabel != null) currentLabel.Text = "Test"+i;
-            //    //}
-            //}
+            var labels = panelPresupuesto.Controls.OfType<Label>().Where(x => x.Name.Contains("lblCantPres"));
+            var presupuesto = Convert.ToDecimal(this.txtPresupuesto.Text, new CultureInfo("en-US"))/ labels.Count();
+            var i = 4;
 
-            //var t = this.GetType();
-            //var controls = t.GetProperties();
-            ////MessageBox.Show(controls.Count);
-            //foreach (PropertyInfo fi in controls)
-            //{
-            //    if (fi.GetType() == typeof(Label))
-            //    {
-            //        var a = 2;
-            //    }
-
-            //    //if (fi.PropertyType.ToString() == "XXXXX")
-            //    //{
-
-            //    //    MessageBox.Show(fi.Name);
-            //    //}
-            //}
+            foreach (Control fi in labels)
+            {
+                var name = string.Format("lblCantPres{0}", i);
+                if (fi.Name == name)
+                {
+                    fi.Text = string.Format("{0}", presupuesto*i);
+                }
+                i--;
+            }
         }
     }
 }

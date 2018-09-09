@@ -32,7 +32,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnSimular = new System.Windows.Forms.Button();
             this.gbParametros = new System.Windows.Forms.GroupBox();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.panelPresupuesto = new System.Windows.Forms.Panel();
             this.lblCantPres4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lblCantPres3 = new System.Windows.Forms.Label();
@@ -94,7 +94,7 @@
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbParametros.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.panelPresupuesto.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
@@ -152,7 +152,7 @@
             // 
             // gbParametros
             // 
-            this.gbParametros.Controls.Add(this.panel4);
+            this.gbParametros.Controls.Add(this.panelPresupuesto);
             this.gbParametros.Controls.Add(this.panel3);
             this.gbParametros.Controls.Add(this.panel2);
             this.gbParametros.Controls.Add(this.panel1);
@@ -163,21 +163,21 @@
             this.gbParametros.TabStop = false;
             this.gbParametros.Text = "Parametros";
             // 
-            // panel4
+            // panelPresupuesto
             // 
-            this.panel4.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.lblCantPres4);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.lblCantPres3);
-            this.panel4.Controls.Add(this.lblCantPres2);
-            this.panel4.Controls.Add(this.lblCantPres1);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.txtPresupuesto);
-            this.panel4.Location = new System.Drawing.Point(23, 22);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1370, 53);
-            this.panel4.TabIndex = 23;
+            this.panelPresupuesto.BackColor = System.Drawing.Color.Gainsboro;
+            this.panelPresupuesto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPresupuesto.Controls.Add(this.lblCantPres4);
+            this.panelPresupuesto.Controls.Add(this.label8);
+            this.panelPresupuesto.Controls.Add(this.lblCantPres3);
+            this.panelPresupuesto.Controls.Add(this.lblCantPres2);
+            this.panelPresupuesto.Controls.Add(this.lblCantPres1);
+            this.panelPresupuesto.Controls.Add(this.label1);
+            this.panelPresupuesto.Controls.Add(this.txtPresupuesto);
+            this.panelPresupuesto.Location = new System.Drawing.Point(23, 22);
+            this.panelPresupuesto.Name = "panelPresupuesto";
+            this.panelPresupuesto.Size = new System.Drawing.Size(1370, 53);
+            this.panelPresupuesto.TabIndex = 23;
             // 
             // lblCantPres4
             // 
@@ -693,13 +693,13 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "7";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.gbParametros.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panelPresupuesto.ResumeLayout(false);
+            this.panelPresupuesto.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
@@ -784,7 +784,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panelPresupuesto;
         private System.Windows.Forms.Label lblCantPres4;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblCantPres3;
