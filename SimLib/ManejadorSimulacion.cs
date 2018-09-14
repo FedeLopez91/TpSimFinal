@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
-using Simlib.Tabla_Probabilidades;
 
 namespace Simlib
 {
@@ -11,7 +10,7 @@ namespace Simlib
     {
 
         private Distribuciones<int> DistCantAutos;
-        private Distribuciones<TipoAuto> DistTiposAuto;
+        //private Distribuciones<TipoAuto> DistTiposAuto;
 
         public DataTable Info { get; protected set; }
         public double Promedio_V1 { get; protected set; }
@@ -25,10 +24,10 @@ namespace Simlib
         private Distribuciones DistComisionesMediano;*/
 
 
-        public ManejadorSimulacion(Distribuciones<int> CantidadAutos, Distribuciones<TipoAuto> TipoAuto)
+        public ManejadorSimulacion(Distribuciones<int> CantidadAutos)
         {
             this.DistCantAutos = CantidadAutos;
-            this.DistTiposAuto = TipoAuto;
+            //this.DistTiposAuto = TipoAuto;
         }
 
         public void Simular(int CantSemanas, int filasMostrar, int mostrarDesde)
@@ -163,13 +162,13 @@ namespace Simlib
             double comision_total = 0;
             for (int i = 0; i < demanda.Valor; i++)
             {
-                var tipo = this.DistTiposAuto.generar();
-                tipos_rnd_tx += tipo.Random + "\n";
-                tipos_tx += tipo.Valor.Nombre + "\n";
-                var comision = tipo.Valor.DistribucionComision.generar();
-                comisiones_rnd_tx += comision.Random + "\n";
-                comisiones_tx += comision.Valor + "\n";
-                comision_total += comision.Valor;
+                //var tipo = this.DistTiposAuto.generar();
+                //tipos_rnd_tx += tipo.Random + "\n";
+                //tipos_tx += tipo.Valor.Nombre + "\n";
+                //var comision = tipo.Valor.DistribucionComision.generar();
+                //comisiones_rnd_tx += comision.Random + "\n";
+                //comisiones_tx += comision.Valor + "\n";
+                //comision_total += comision.Valor;
             }
 
             //Cantidad Auto (Rnd + Nro) - Tipo Autos (Rnd + nro) - Comisiones (Rnd + Nros) - Comision Total Ven

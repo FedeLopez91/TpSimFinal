@@ -40,76 +40,76 @@
             this.lblCantPres1 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPresupuesto = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.pProyC = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView8 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView10 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView11 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView12 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvProyC4 = new System.Windows.Forms.DataGridView();
+            this.dgvProyC1 = new System.Windows.Forms.DataGridView();
+            this.dgvProyC3 = new System.Windows.Forms.DataGridView();
+            this.dgvProyC2 = new System.Windows.Forms.DataGridView();
+            this.pProyB = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView5 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView6 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView7 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.dgvProyB4 = new System.Windows.Forms.DataGridView();
+            this.dgvProyB1 = new System.Windows.Forms.DataGridView();
+            this.dgvProyB3 = new System.Windows.Forms.DataGridView();
+            this.dgvProyB2 = new System.Windows.Forms.DataGridView();
+            this.pProyA = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.dataGridView9 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.vpn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prob = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvProyA4 = new System.Windows.Forms.DataGridView();
+            this.dgvProyA1 = new System.Windows.Forms.DataGridView();
+            this.dgvProyA3 = new System.Windows.Forms.DataGridView();
+            this.dgvProyA2 = new System.Windows.Forms.DataGridView();
             this.gbConfiguracion = new System.Windows.Forms.GroupBox();
             this.txtNroIteraciones = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtMostrarHasta = new System.Windows.Forms.TextBox();
+            this.txtCantMostrar = new System.Windows.Forms.TextBox();
             this.txtMostrarDesde = new System.Windows.Forms.TextBox();
             this.lblHasta = new System.Windows.Forms.Label();
             this.lblDesde = new System.Windows.Forms.Label();
             this.lblNroIteraciones = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.vpn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prob = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbParametros.SuspendLayout();
             this.panelPresupuesto.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).BeginInit();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.pProyC.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyC4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyC1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyC3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyC2)).BeginInit();
+            this.pProyB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyB4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyB1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyB3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyB2)).BeginInit();
+            this.pProyA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyA4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyA1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyA3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyA2)).BeginInit();
             this.gbConfiguracion.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -122,7 +122,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1468, 888);
+            this.tabControl1.Size = new System.Drawing.Size(1468, 869);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -134,7 +134,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1460, 855);
+            this.tabPage1.Size = new System.Drawing.Size(1460, 836);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Parametros";
             // 
@@ -143,22 +143,23 @@
             this.btnSimular.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSimular.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSimular.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnSimular.Location = new System.Drawing.Point(1249, 166);
+            this.btnSimular.Location = new System.Drawing.Point(1249, 142);
             this.btnSimular.Name = "btnSimular";
             this.btnSimular.Size = new System.Drawing.Size(181, 43);
             this.btnSimular.TabIndex = 2;
             this.btnSimular.Text = "Simular";
             this.btnSimular.UseVisualStyleBackColor = false;
+            this.btnSimular.Click += new System.EventHandler(this.btnSimular_Click);
             // 
             // gbParametros
             // 
             this.gbParametros.Controls.Add(this.panelPresupuesto);
-            this.gbParametros.Controls.Add(this.panel3);
-            this.gbParametros.Controls.Add(this.panel2);
-            this.gbParametros.Controls.Add(this.panel1);
-            this.gbParametros.Location = new System.Drawing.Point(19, 215);
+            this.gbParametros.Controls.Add(this.pProyC);
+            this.gbParametros.Controls.Add(this.pProyB);
+            this.gbParametros.Controls.Add(this.pProyA);
+            this.gbParametros.Location = new System.Drawing.Point(19, 191);
             this.gbParametros.Name = "gbParametros";
-            this.gbParametros.Size = new System.Drawing.Size(1411, 618);
+            this.gbParametros.Size = new System.Drawing.Size(1411, 636);
             this.gbParametros.TabIndex = 1;
             this.gbParametros.TabStop = false;
             this.gbParametros.Text = "Parametros";
@@ -252,19 +253,19 @@
             this.txtPresupuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarPresupuesto_KeyPress);
             this.txtPresupuesto.Leave += new System.EventHandler(this.calcularDivisionPresupuesto);
             // 
-            // panel3
+            // pProyC
             // 
-            this.panel3.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.dataGridView8);
-            this.panel3.Controls.Add(this.dataGridView10);
-            this.panel3.Controls.Add(this.dataGridView11);
-            this.panel3.Controls.Add(this.dataGridView12);
-            this.panel3.Location = new System.Drawing.Point(23, 443);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1370, 168);
-            this.panel3.TabIndex = 24;
+            this.pProyC.BackColor = System.Drawing.Color.Gainsboro;
+            this.pProyC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pProyC.Controls.Add(this.label4);
+            this.pProyC.Controls.Add(this.dgvProyC4);
+            this.pProyC.Controls.Add(this.dgvProyC1);
+            this.pProyC.Controls.Add(this.dgvProyC3);
+            this.pProyC.Controls.Add(this.dgvProyC2);
+            this.pProyC.Location = new System.Drawing.Point(23, 449);
+            this.pProyC.Name = "pProyC";
+            this.pProyC.Size = new System.Drawing.Size(1370, 177);
+            this.pProyC.TabIndex = 24;
             // 
             // label4
             // 
@@ -277,108 +278,75 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Proyecto C";
             // 
-            // dataGridView8
+            // dgvProyC4
             // 
-            this.dataGridView8.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView8.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyC4.AllowUserToAddRows = false;
+            this.dgvProyC4.AllowUserToDeleteRows = false;
+            this.dgvProyC4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyC4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn13,
             this.dataGridViewTextBoxColumn14});
-            this.dataGridView8.Location = new System.Drawing.Point(1099, 8);
-            this.dataGridView8.Name = "dataGridView8";
-            this.dataGridView8.RowTemplate.Height = 24;
-            this.dataGridView8.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView8.TabIndex = 18;
+            this.dgvProyC4.Location = new System.Drawing.Point(1099, 8);
+            this.dgvProyC4.Name = "dgvProyC4";
+            this.dgvProyC4.RowTemplate.Height = 24;
+            this.dgvProyC4.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyC4.TabIndex = 18;
             // 
-            // dataGridViewTextBoxColumn13
+            // dgvProyC1
             // 
-            this.dataGridViewTextBoxColumn13.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            // 
-            // dataGridView10
-            // 
-            this.dataGridView10.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView10.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyC1.AllowUserToAddRows = false;
+            this.dgvProyC1.AllowUserToDeleteRows = false;
+            this.dgvProyC1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyC1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn17,
             this.dataGridViewTextBoxColumn18});
-            this.dataGridView10.Location = new System.Drawing.Point(247, 8);
-            this.dataGridView10.Name = "dataGridView10";
-            this.dataGridView10.RowTemplate.Height = 24;
-            this.dataGridView10.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView10.TabIndex = 9;
+            this.dgvProyC1.Location = new System.Drawing.Point(247, 8);
+            this.dgvProyC1.Name = "dgvProyC1";
+            this.dgvProyC1.RowTemplate.Height = 24;
+            this.dgvProyC1.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyC1.TabIndex = 9;
             // 
-            // dataGridViewTextBoxColumn17
+            // dgvProyC3
             // 
-            this.dataGridViewTextBoxColumn17.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
-            // 
-            // dataGridViewTextBoxColumn18
-            // 
-            this.dataGridViewTextBoxColumn18.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
-            this.dataGridViewTextBoxColumn18.Width = 50;
-            // 
-            // dataGridView11
-            // 
-            this.dataGridView11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView11.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyC3.AllowUserToAddRows = false;
+            this.dgvProyC3.AllowUserToDeleteRows = false;
+            this.dgvProyC3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyC3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn19,
             this.dataGridViewTextBoxColumn20});
-            this.dataGridView11.Location = new System.Drawing.Point(815, 8);
-            this.dataGridView11.Name = "dataGridView11";
-            this.dataGridView11.RowTemplate.Height = 24;
-            this.dataGridView11.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView11.TabIndex = 10;
+            this.dgvProyC3.Location = new System.Drawing.Point(815, 8);
+            this.dgvProyC3.Name = "dgvProyC3";
+            this.dgvProyC3.RowTemplate.Height = 24;
+            this.dgvProyC3.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyC3.TabIndex = 10;
             // 
-            // dataGridViewTextBoxColumn19
+            // dgvProyC2
             // 
-            this.dataGridViewTextBoxColumn19.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
-            // 
-            // dataGridViewTextBoxColumn20
-            // 
-            this.dataGridViewTextBoxColumn20.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
-            // 
-            // dataGridView12
-            // 
-            this.dataGridView12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyC2.AllowUserToAddRows = false;
+            this.dgvProyC2.AllowUserToDeleteRows = false;
+            this.dgvProyC2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyC2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn21,
             this.dataGridViewTextBoxColumn22});
-            this.dataGridView12.Location = new System.Drawing.Point(531, 8);
-            this.dataGridView12.Name = "dataGridView12";
-            this.dataGridView12.RowTemplate.Height = 24;
-            this.dataGridView12.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView12.TabIndex = 11;
+            this.dgvProyC2.Location = new System.Drawing.Point(531, 8);
+            this.dgvProyC2.Name = "dgvProyC2";
+            this.dgvProyC2.RowTemplate.Height = 24;
+            this.dgvProyC2.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyC2.TabIndex = 11;
             // 
-            // dataGridViewTextBoxColumn21
+            // pProyB
             // 
-            this.dataGridViewTextBoxColumn21.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
-            // 
-            // dataGridViewTextBoxColumn22
-            // 
-            this.dataGridViewTextBoxColumn22.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.dataGridView4);
-            this.panel2.Controls.Add(this.dataGridView5);
-            this.panel2.Controls.Add(this.dataGridView6);
-            this.panel2.Controls.Add(this.dataGridView7);
-            this.panel2.Location = new System.Drawing.Point(23, 262);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1370, 168);
-            this.panel2.TabIndex = 23;
+            this.pProyB.BackColor = System.Drawing.Color.Gainsboro;
+            this.pProyB.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pProyB.Controls.Add(this.label3);
+            this.pProyB.Controls.Add(this.dgvProyB4);
+            this.pProyB.Controls.Add(this.dgvProyB1);
+            this.pProyB.Controls.Add(this.dgvProyB3);
+            this.pProyB.Controls.Add(this.dgvProyB2);
+            this.pProyB.Location = new System.Drawing.Point(23, 266);
+            this.pProyB.Name = "pProyB";
+            this.pProyB.Size = new System.Drawing.Size(1370, 177);
+            this.pProyB.TabIndex = 23;
             // 
             // label3
             // 
@@ -391,108 +359,75 @@
             this.label3.TabIndex = 20;
             this.label3.Text = "Proyecto B";
             // 
-            // dataGridView4
+            // dgvProyB4
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyB4.AllowUserToAddRows = false;
+            this.dgvProyB4.AllowUserToDeleteRows = false;
+            this.dgvProyB4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyB4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            this.dataGridView4.Location = new System.Drawing.Point(1099, 8);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.RowTemplate.Height = 24;
-            this.dataGridView4.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView4.TabIndex = 18;
+            this.dgvProyB4.Location = new System.Drawing.Point(1099, 8);
+            this.dgvProyB4.Name = "dgvProyB4";
+            this.dgvProyB4.RowTemplate.Height = 24;
+            this.dgvProyB4.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyB4.TabIndex = 18;
             // 
-            // dataGridViewTextBoxColumn5
+            // dgvProyB1
             // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            // 
-            // dataGridView5
-            // 
-            this.dataGridView5.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView5.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyB1.AllowUserToAddRows = false;
+            this.dgvProyB1.AllowUserToDeleteRows = false;
+            this.dgvProyB1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyB1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            this.dataGridView5.Location = new System.Drawing.Point(247, 8);
-            this.dataGridView5.Name = "dataGridView5";
-            this.dataGridView5.RowTemplate.Height = 24;
-            this.dataGridView5.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView5.TabIndex = 9;
+            this.dgvProyB1.Location = new System.Drawing.Point(247, 8);
+            this.dgvProyB1.Name = "dgvProyB1";
+            this.dgvProyB1.RowTemplate.Height = 24;
+            this.dgvProyB1.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyB1.TabIndex = 9;
             // 
-            // dataGridViewTextBoxColumn7
+            // dgvProyB3
             // 
-            this.dataGridViewTextBoxColumn7.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.Width = 50;
-            // 
-            // dataGridView6
-            // 
-            this.dataGridView6.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView6.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyB3.AllowUserToAddRows = false;
+            this.dgvProyB3.AllowUserToDeleteRows = false;
+            this.dgvProyB3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyB3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10});
-            this.dataGridView6.Location = new System.Drawing.Point(815, 8);
-            this.dataGridView6.Name = "dataGridView6";
-            this.dataGridView6.RowTemplate.Height = 24;
-            this.dataGridView6.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView6.TabIndex = 10;
+            this.dgvProyB3.Location = new System.Drawing.Point(815, 8);
+            this.dgvProyB3.Name = "dgvProyB3";
+            this.dgvProyB3.RowTemplate.Height = 24;
+            this.dgvProyB3.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyB3.TabIndex = 10;
             // 
-            // dataGridViewTextBoxColumn9
+            // dgvProyB2
             // 
-            this.dataGridViewTextBoxColumn9.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            // 
-            // dataGridView7
-            // 
-            this.dataGridView7.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView7.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyB2.AllowUserToAddRows = false;
+            this.dgvProyB2.AllowUserToDeleteRows = false;
+            this.dgvProyB2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyB2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
-            this.dataGridView7.Location = new System.Drawing.Point(531, 8);
-            this.dataGridView7.Name = "dataGridView7";
-            this.dataGridView7.RowTemplate.Height = 24;
-            this.dataGridView7.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView7.TabIndex = 11;
+            this.dgvProyB2.Location = new System.Drawing.Point(531, 8);
+            this.dgvProyB2.Name = "dgvProyB2";
+            this.dgvProyB2.RowTemplate.Height = 24;
+            this.dgvProyB2.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyB2.TabIndex = 11;
             // 
-            // dataGridViewTextBoxColumn11
+            // pProyA
             // 
-            this.dataGridViewTextBoxColumn11.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.dataGridView9);
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Controls.Add(this.dataGridView2);
-            this.panel1.Controls.Add(this.dataGridView3);
-            this.panel1.Location = new System.Drawing.Point(23, 81);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1370, 168);
-            this.panel1.TabIndex = 22;
+            this.pProyA.BackColor = System.Drawing.Color.Gainsboro;
+            this.pProyA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pProyA.Controls.Add(this.label2);
+            this.pProyA.Controls.Add(this.dgvProyA4);
+            this.pProyA.Controls.Add(this.dgvProyA1);
+            this.pProyA.Controls.Add(this.dgvProyA3);
+            this.pProyA.Controls.Add(this.dgvProyA2);
+            this.pProyA.Location = new System.Drawing.Point(23, 83);
+            this.pProyA.Name = "pProyA";
+            this.pProyA.Size = new System.Drawing.Size(1370, 177);
+            this.pProyA.TabIndex = 22;
             // 
             // label2
             // 
@@ -505,94 +440,61 @@
             this.label2.TabIndex = 19;
             this.label2.Text = "Proyecto A";
             // 
-            // dataGridView9
+            // dgvProyA4
             // 
-            this.dataGridView9.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView9.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyA4.AllowUserToAddRows = false;
+            this.dgvProyA4.AllowUserToDeleteRows = false;
+            this.dgvProyA4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyA4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16});
-            this.dataGridView9.Location = new System.Drawing.Point(1099, 9);
-            this.dataGridView9.Name = "dataGridView9";
-            this.dataGridView9.RowTemplate.Height = 24;
-            this.dataGridView9.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView9.TabIndex = 18;
+            this.dgvProyA4.Location = new System.Drawing.Point(1099, 9);
+            this.dgvProyA4.Name = "dgvProyA4";
+            this.dgvProyA4.RowTemplate.Height = 24;
+            this.dgvProyA4.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyA4.TabIndex = 18;
             // 
-            // dataGridViewTextBoxColumn15
+            // dgvProyA1
             // 
-            this.dataGridViewTextBoxColumn15.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
-            // 
-            // dataGridViewTextBoxColumn16
-            // 
-            this.dataGridViewTextBoxColumn16.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyA1.AllowUserToAddRows = false;
+            this.dgvProyA1.AllowUserToDeleteRows = false;
+            this.dgvProyA1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyA1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.vpn,
             this.prob});
-            this.dataGridView1.Location = new System.Drawing.Point(247, 9);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView1.TabIndex = 9;
+            this.dgvProyA1.Location = new System.Drawing.Point(247, 9);
+            this.dgvProyA1.Name = "dgvProyA1";
+            this.dgvProyA1.RowTemplate.Height = 24;
+            this.dgvProyA1.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyA1.TabIndex = 9;
             // 
-            // vpn
+            // dgvProyA3
             // 
-            this.vpn.HeaderText = "VPN";
-            this.vpn.Name = "vpn";
-            // 
-            // prob
-            // 
-            this.prob.HeaderText = "Prob(%)";
-            this.prob.Name = "prob";
-            this.prob.Width = 50;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyA3.AllowUserToAddRows = false;
+            this.dgvProyA3.AllowUserToDeleteRows = false;
+            this.dgvProyA3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyA3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.dataGridView2.Location = new System.Drawing.Point(815, 9);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView2.TabIndex = 10;
+            this.dgvProyA3.Location = new System.Drawing.Point(815, 9);
+            this.dgvProyA3.Name = "dgvProyA3";
+            this.dgvProyA3.RowTemplate.Height = 24;
+            this.dgvProyA3.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyA3.TabIndex = 10;
             // 
-            // dataGridViewTextBoxColumn1
+            // dgvProyA2
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvProyA2.AllowUserToAddRows = false;
+            this.dgvProyA2.AllowUserToDeleteRows = false;
+            this.dgvProyA2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProyA2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4});
-            this.dataGridView3.Location = new System.Drawing.Point(531, 9);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(262, 150);
-            this.dataGridView3.TabIndex = 11;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "VPN";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "Prob(%)";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dgvProyA2.Location = new System.Drawing.Point(531, 9);
+            this.dgvProyA2.Name = "dgvProyA2";
+            this.dgvProyA2.RowTemplate.Height = 24;
+            this.dgvProyA2.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyA2.TabIndex = 11;
             // 
             // gbConfiguracion
             // 
@@ -601,9 +503,9 @@
             this.gbConfiguracion.Controls.Add(this.groupBox2);
             this.gbConfiguracion.Controls.Add(this.lblNroIteraciones);
             this.gbConfiguracion.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gbConfiguracion.Location = new System.Drawing.Point(19, 19);
+            this.gbConfiguracion.Location = new System.Drawing.Point(19, 6);
             this.gbConfiguracion.Name = "gbConfiguracion";
-            this.gbConfiguracion.Size = new System.Drawing.Size(454, 179);
+            this.gbConfiguracion.Size = new System.Drawing.Size(533, 179);
             this.gbConfiguracion.TabIndex = 0;
             this.gbConfiguracion.TabStop = false;
             this.gbConfiguracion.Text = "Configuración";
@@ -618,24 +520,24 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.txtMostrarHasta);
+            this.groupBox2.Controls.Add(this.txtCantMostrar);
             this.groupBox2.Controls.Add(this.txtMostrarDesde);
             this.groupBox2.Controls.Add(this.lblHasta);
             this.groupBox2.Controls.Add(this.lblDesde);
             this.groupBox2.Location = new System.Drawing.Point(21, 62);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(410, 68);
+            this.groupBox2.Size = new System.Drawing.Size(493, 68);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Mostrar";
             // 
-            // txtMostrarHasta
+            // txtCantMostrar
             // 
-            this.txtMostrarHasta.Location = new System.Drawing.Point(289, 29);
-            this.txtMostrarHasta.Name = "txtMostrarHasta";
-            this.txtMostrarHasta.Size = new System.Drawing.Size(100, 26);
-            this.txtMostrarHasta.TabIndex = 5;
-            this.txtMostrarHasta.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarMostrarHasta_KeyPress);
+            this.txtCantMostrar.Location = new System.Drawing.Point(375, 26);
+            this.txtCantMostrar.Name = "txtCantMostrar";
+            this.txtCantMostrar.Size = new System.Drawing.Size(100, 26);
+            this.txtCantMostrar.TabIndex = 5;
+            this.txtCantMostrar.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarMostrarHasta_KeyPress);
             // 
             // txtMostrarDesde
             // 
@@ -650,9 +552,9 @@
             this.lblHasta.AutoSize = true;
             this.lblHasta.Location = new System.Drawing.Point(229, 32);
             this.lblHasta.Name = "lblHasta";
-            this.lblHasta.Size = new System.Drawing.Size(54, 20);
+            this.lblHasta.Size = new System.Drawing.Size(121, 20);
             this.lblHasta.TabIndex = 2;
-            this.lblHasta.Text = "Hasta";
+            this.lblHasta.Text = "Cant a Mostrar";
             this.lblHasta.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblDesde
@@ -683,41 +585,185 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Resultado";
             // 
+            // vpn
+            // 
+            this.vpn.HeaderText = "VPN";
+            this.vpn.Name = "vpn";
+            this.vpn.Width = 50;
+            // 
+            // prob
+            // 
+            this.prob.HeaderText = "Prob(%)";
+            this.prob.Name = "prob";
+            this.prob.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this.dataGridViewTextBoxColumn15.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
+            this.dataGridViewTextBoxColumn15.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this.dataGridViewTextBoxColumn16.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
+            this.dataGridViewTextBoxColumn16.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this.dataGridViewTextBoxColumn19.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn19.Name = "dataGridViewTextBoxColumn19";
+            this.dataGridViewTextBoxColumn19.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this.dataGridViewTextBoxColumn20.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn20.Name = "dataGridViewTextBoxColumn20";
+            this.dataGridViewTextBoxColumn20.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this.dataGridViewTextBoxColumn21.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn21.Name = "dataGridViewTextBoxColumn21";
+            this.dataGridViewTextBoxColumn21.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this.dataGridViewTextBoxColumn22.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn22.Name = "dataGridViewTextBoxColumn22";
+            this.dataGridViewTextBoxColumn22.Width = 75;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this.dataGridViewTextBoxColumn17.HeaderText = "VPN";
+            this.dataGridViewTextBoxColumn17.Name = "dataGridViewTextBoxColumn17";
+            this.dataGridViewTextBoxColumn17.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this.dataGridViewTextBoxColumn18.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn18.Name = "dataGridViewTextBoxColumn18";
+            this.dataGridViewTextBoxColumn18.Width = 75;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1497, 914);
+            this.ClientSize = new System.Drawing.Size(1497, 889);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "7";
+            this.Text = "Tp Final Ej 147 - Federico Lopez - Legajo: 55025";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.gbParametros.ResumeLayout(false);
             this.panelPresupuesto.ResumeLayout(false);
             this.panelPresupuesto.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView12)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView7)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.pProyC.ResumeLayout(false);
+            this.pProyC.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyC4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyC1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyC3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyC2)).EndInit();
+            this.pProyB.ResumeLayout(false);
+            this.pProyB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyB4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyB1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyB3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyB2)).EndInit();
+            this.pProyA.ResumeLayout(false);
+            this.pProyA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyA4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyA1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyA3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProyA2)).EndInit();
             this.gbConfiguracion.ResumeLayout(false);
             this.gbConfiguracion.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -737,52 +783,28 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TextBox txtNroIteraciones;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtMostrarHasta;
+        private System.Windows.Forms.TextBox txtCantMostrar;
         private System.Windows.Forms.TextBox txtMostrarDesde;
         private System.Windows.Forms.GroupBox gbParametros;
         private System.Windows.Forms.TextBox txtPresupuesto;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn vpn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prob;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DataGridView dgvProyA2;
+        private System.Windows.Forms.DataGridView dgvProyA3;
+        private System.Windows.Forms.DataGridView dgvProyA1;
+        private System.Windows.Forms.DataGridView dgvProyA4;
+        private System.Windows.Forms.Panel pProyC;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
-        private System.Windows.Forms.DataGridView dataGridView10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
-        private System.Windows.Forms.DataGridView dataGridView11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
-        private System.Windows.Forms.DataGridView dataGridView12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dgvProyC4;
+        private System.Windows.Forms.DataGridView dgvProyC1;
+        private System.Windows.Forms.DataGridView dgvProyC3;
+        private System.Windows.Forms.DataGridView dgvProyC2;
+        private System.Windows.Forms.Panel pProyB;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridView dataGridView5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridView dataGridView6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridView dataGridView7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgvProyB4;
+        private System.Windows.Forms.DataGridView dgvProyB1;
+        private System.Windows.Forms.DataGridView dgvProyB3;
+        private System.Windows.Forms.DataGridView dgvProyB2;
+        private System.Windows.Forms.Panel pProyA;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panelPresupuesto;
         private System.Windows.Forms.Label lblCantPres4;
@@ -791,6 +813,30 @@
         private System.Windows.Forms.Label lblCantPres2;
         private System.Windows.Forms.Label lblCantPres1;
         private System.Windows.Forms.Button btnSimular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn vpn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prob;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn19;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn20;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
     }
 }
 
