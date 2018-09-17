@@ -1,196 +1,108 @@
-﻿using System;
+﻿using SimLib;
 using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
 
 namespace Simlib
 {
     public class ManejadorSimulacion
     {
-
-        private Distribuciones<int> DistCantAutos;
-        //private Distribuciones<TipoAuto> DistTiposAuto;
-
+        public List<VectorSimulacion> Simulacion { get; set; }
         public DataTable Info { get; protected set; }
-        public double Promedio_V1 { get; protected set; }
-        public double Promedio_V2{ get; protected set; }
-        public double Promedio_V3{ get; protected set; }
-        public double Promedio_V4{ get; protected set; }
-        public double Promedio_Vendedores{ get; protected set; }
-        public double Promedio_Total { get; protected set; }
+        public Distribuciones<double>[] ProyectoA { get; protected set; }
+        public Distribuciones<double>[] ProyectoB { get; protected set; }
+        public Distribuciones<double>[] ProyectoC { get; protected set; }
+        public Distribuciones<double> Inversion { get; protected set; }
 
-        /*private Distribuciones DistComisionesLujo;
-        private Distribuciones DistComisionesMediano;*/
-
-
-        public ManejadorSimulacion(Distribuciones<int> CantidadAutos)
+        public ManejadorSimulacion(Distribuciones<double>[] proyectoA, Distribuciones<double>[] proyectoB, 
+            Distribuciones<double>[] proyectoC, Distribuciones<double> inversion)
         {
-            this.DistCantAutos = CantidadAutos;
-            //this.DistTiposAuto = TipoAuto;
+            ProyectoA = proyectoA;
+            ProyectoB = proyectoB;
+            ProyectoC = proyectoC;
+            Inversion = inversion;
         }
 
-        public void Simular(int CantSemanas, int filasMostrar, int mostrarDesde)
+        public void Simular(int cantIteraciones, int filasMostrar, int mostrarDesde, int presupuesto)
         {
-            DataTable tabla = new DataTable(); //Tabla que será devuelta
-
-            tabla.Columns.Add("Semana Numero:");
-
-            tabla.Columns.Add("(v1) RND Cant Autos");
-            tabla.Columns.Add("(v1) Cantidad Autos");
-            tabla.Columns.Add("(v1) RND Tipo Auto");
-            tabla.Columns.Add("(v1) Tipo Auto");
-            tabla.Columns.Add("(v1) RND Comision");
-            tabla.Columns.Add("(v1) Comision");
-            tabla.Columns.Add("(v1) Comision Total");
-            tabla.Columns.Add("(v1) Comision Acumulada");
-
-            tabla.Columns.Add("(v2) RND Cant Autos");
-            tabla.Columns.Add("(v2) Cantidad Autos");
-            tabla.Columns.Add("(v2) RND Tipo Auto");
-            tabla.Columns.Add("(v2) Tipo Auto");
-            tabla.Columns.Add("(v2) RND Comision");
-            tabla.Columns.Add("(v2) Comision");
-            tabla.Columns.Add("(v2) Comision Total");
-            tabla.Columns.Add("(v2) Comision Acumulada");
-
-            tabla.Columns.Add("(v3) RND Cant Autos");
-            tabla.Columns.Add("(v3) Cantidad Autos");
-            tabla.Columns.Add("(v3) RND Tipo Auto");
-            tabla.Columns.Add("(v3) Tipo Auto");
-            tabla.Columns.Add("(v3) RND Comision");
-            tabla.Columns.Add("(v3) Comision");
-            tabla.Columns.Add("(v3) Comision Total");
-            tabla.Columns.Add("(v3) Comision Acumulada");
-
-            tabla.Columns.Add("(v4) RND Cant Autos");
-            tabla.Columns.Add("(v4) Cantidad Autos");
-            tabla.Columns.Add("(v4) RND Tipo Auto");
-            tabla.Columns.Add("(v4) Tipo Auto");
-            tabla.Columns.Add("(v4) RND Comision");
-            tabla.Columns.Add("(v4) Comision");
-            tabla.Columns.Add("(v4) Comision Total");
-            tabla.Columns.Add("(v4) Comision Acumulada");
-
-            tabla.Columns.Add("Comision Total");
-            tabla.Columns.Add("Comision Acumulada Total");
-            
-
+            Simulacion = new List<VectorSimulacion>();
             var mostrarHasta = mostrarDesde + filasMostrar;
+            var vAnterior = new VectorSimulacion();
 
-            string[] vector = new string[35];
-
-            double acum_v1 = 0;
-            double acum_v2 = 0;
-            double acum_v3 = 0;
-            double acum_v4 = 0;
-            double acum_total = 0;
-            for (int semana = 1; semana <= CantSemanas; semana++)
+            for (int semana = 1; semana <= cantIteraciones; semana++)
             {
-                vector[0] = semana.ToString();
+                var vActual = new VectorSimulacion(); ;
 
-                var ven1 = SubVectorVendedor();
-                var ven2 = SubVectorVendedor();
-                var ven3 = SubVectorVendedor();
-                var ven4 = SubVectorVendedor();
+                var RNDA = Inversion.Generar();
+                vActual.RndProyectoA = RNDA.Random;
+                vActual.InversionProyectoA = RNDA.Valor;
+                var indicePA = RNDA.PosicionTabla;
 
-                acum_v1 += Convert.ToDouble(ven1[6]);
-                acum_v2 += Convert.ToDouble(ven2[6]);
-                acum_v3 += Convert.ToDouble(ven3[6]);
-                acum_v4 += Convert.ToDouble(ven4[6]);
+                var RNDVPNA = ProyectoA[indicePA].Generar();
+                vActual.RndVPNProyectoA = RNDVPNA.Random;
+                vActual.VPNProyectoA = RNDVPNA.Valor;
 
-                double total = Convert.ToDouble(ven1[6]) + 
-                    Convert.ToDouble(ven2[6]) + 
-                    Convert.ToDouble(ven3[6]) + 
-                    Convert.ToDouble(ven4[6]);
+                var RNDB = Inversion.Generar();
+                vActual.RndProyectoB = RNDB.Random;
+                vActual.InversionProyectoB = RNDB.Valor;
+                var indicePB = RNDB.PosicionTabla;
 
-                acum_total += total;
+                var RNDVPNB = ProyectoB[indicePB].Generar();
+                vActual.RndVPNProyectoB = RNDVPNB.Random;
+                vActual.VPNProyectoB = RNDVPNB.Valor;
 
-                // del 1 al 7
-                agregarSubVendedor(ref vector, ref ven1, 1);
-                vector[8] = acum_v1.ToString();
-                
-                //del 9 al 15
-                agregarSubVendedor(ref vector, ref ven2, 9);
-                vector[16] = acum_v2.ToString();
+                var RNDC = Inversion.Generar();
+                vActual.RndProyectoC = RNDC.Random;
+                vActual.InversionProyectoC = RNDC.Valor;
+                var indicePC = RNDC.PosicionTabla;
 
-                //del 17 al 23
-                agregarSubVendedor(ref vector, ref ven3, 17);
-                vector[24] = acum_v3.ToString();
+                var RNDVPNC = ProyectoC[indicePC].Generar();
+                vActual.RndVPNProyectoC = RNDVPNC.Random;
+                vActual.VPNProyectoC = RNDVPNC.Valor;
 
-                //del 25 al 31
-                agregarSubVendedor(ref vector, ref ven4, 25);
-                vector[32] = acum_v4.ToString();
+                vActual.AcumVPN = vActual.VPNProyectoA + vActual.VPNProyectoB + vActual.VPNProyectoC;
 
-                vector[33] = total.ToString();
-                vector[34] = acum_total.ToString();
+                if(vActual.AcumVPN > vAnterior.AcumVPN)
+                {
+                    vActual.AcumMejorVPN = vActual.AcumVPN;
 
+                    vActual.InversionMejorProyectoA = vActual.InversionProyectoA;
+                    vActual.VPNMejorProyectoA = vActual.VPNProyectoA;
+
+                    vActual.InversionMejorProyectoB = vActual.InversionProyectoB;
+                    vActual.VPNMejorProyectoB = vActual.VPNProyectoB;
+
+                    vActual.InversionMejorProyectoC = vActual.InversionProyectoC;
+                    vActual.VPNMejorProyectoC = vActual.VPNProyectoC;
+                }
+                else
+                {
+                    vActual.AcumMejorVPN = vAnterior.AcumVPN;
+
+                    vActual.InversionMejorProyectoA = vAnterior.InversionProyectoA;
+                    vActual.VPNMejorProyectoA = vAnterior.VPNProyectoA;
+
+                    vActual.InversionMejorProyectoB = vAnterior.InversionProyectoB;
+                    vActual.VPNMejorProyectoB = vAnterior.VPNProyectoB;
+
+                    vActual.InversionMejorProyectoC = vAnterior.InversionProyectoC;
+                    vActual.VPNMejorProyectoC = vAnterior.VPNProyectoC;
+                }
+
+                vAnterior = vActual;
                 //Agregar a la tabla a mostrar;
                 if (semana >= mostrarDesde && semana < mostrarHasta)
-                    tabla.LoadDataRow(vector, true);
+                {
+                    Simulacion.Add(vActual);
+                }
+
+                ////Agregar Fila final
+                //tabla.LoadDataRow(vector, true);
+
+                ////Setear Tabla
+                //this.Info = tabla;
             }
+            Simulacion.Add(vAnterior);
 
-            //Agregar Fila final
-            tabla.LoadDataRow(vector, true);
-
-            //logica final
-            Promedio_V1 = acum_v1 / CantSemanas;
-            Promedio_V2 = acum_v2 / CantSemanas;
-            Promedio_V3 = acum_v3 / CantSemanas;
-            Promedio_V4 = acum_v4 / CantSemanas;
-
-            Promedio_Vendedores = (Promedio_V1 + Promedio_V2 + Promedio_V3 + Promedio_V4) / 4;
-
-            Promedio_Total = acum_total / CantSemanas;
-
-            //Setear Tabla
-            this.Info = tabla;
         }
-
-        private String[] SubVectorVendedor()
-        {
-            String[] subVector = new String[7];
-            //Cantidad Auto (Rnd + Nro) - Tipo Autos (Rnd + nro) - Comisiones (Rnd + Nros) - Comision Total Ven
-
-            RndValor<int> demanda = this.DistCantAutos.generar();
-
-
-            string tipos_rnd_tx = "";
-            string tipos_tx = "";
-            string comisiones_rnd_tx = "";
-            string comisiones_tx = "";
-            double comision_total = 0;
-            for (int i = 0; i < demanda.Valor; i++)
-            {
-                //var tipo = this.DistTiposAuto.generar();
-                //tipos_rnd_tx += tipo.Random + "\n";
-                //tipos_tx += tipo.Valor.Nombre + "\n";
-                //var comision = tipo.Valor.DistribucionComision.generar();
-                //comisiones_rnd_tx += comision.Random + "\n";
-                //comisiones_tx += comision.Valor + "\n";
-                //comision_total += comision.Valor;
-            }
-
-            //Cantidad Auto (Rnd + Nro) - Tipo Autos (Rnd + nro) - Comisiones (Rnd + Nros) - Comision Total Ven
-            subVector[0] = demanda.Random.ToString();
-            subVector[1] = demanda.Valor.ToString();
-            subVector[2] = tipos_rnd_tx;
-            subVector[3] = tipos_tx;
-            subVector[4] = comisiones_rnd_tx;
-            subVector[5] = comisiones_tx;
-            subVector[6] = comision_total.ToString();
-
-
-            return subVector;
-        }
-
-        private void agregarSubVendedor(ref string[] vector,ref string[] vendedor, int desde)
-        {
-            for (int i = 0; i < vendedor.Length; i++)
-            {
-                vector[desde + i] = vendedor[i];
-            }
-        }
-        
     }
 }

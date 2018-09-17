@@ -10,10 +10,12 @@ namespace Simlib
     {
         public double Random { get;protected set; }
         public T Valor  { get;protected set; }
-        public RndValor(double rnd, T valor)
+        public int PosicionTabla { get; set; }
+        public RndValor(double rnd, T valor, int posicionTabla)
         {
-            this.Valor = valor;
-            this.Random = rnd;
+            Valor = valor;
+            Random = rnd;
+            PosicionTabla = posicionTabla;
         }
     }
 }
