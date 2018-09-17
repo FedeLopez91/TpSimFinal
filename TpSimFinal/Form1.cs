@@ -16,24 +16,24 @@ namespace TpSimFinal
     public partial class Form1 : Form
     {
         //Proyecto A
-        Distribuciones<double> distProyA1;
-        Distribuciones<double> distProyA2;
-        Distribuciones<double> distProyA3;
-        Distribuciones<double> distProyA4;
+        public Distribuciones<double> distProyA1;
+        public Distribuciones<double> distProyA2;
+        public Distribuciones<double> distProyA3;
+        public Distribuciones<double> distProyA4;
         Distribuciones<double>[] ProyectoA = new Distribuciones<double>[4];
         
 
         //Proyecto B
-        Distribuciones<double> distProyB1;
-        Distribuciones<double> distProyB2;
-        Distribuciones<double> distProyB3;
-        Distribuciones<double> distProyB4;
+        public Distribuciones<double> distProyB1;
+        public Distribuciones<double> distProyB2;
+        public Distribuciones<double> distProyB3;
+        public Distribuciones<double> distProyB4;
         Distribuciones<double>[] ProyectoB = new Distribuciones<double>[4];
         //Proyecto C
-        Distribuciones<double> distProyC1;
-        Distribuciones<double> distProyC2;
-        Distribuciones<double> distProyC3;
-        Distribuciones<double> distProyC4;
+        public Distribuciones<double> distProyC1;
+        public Distribuciones<double> distProyC2;
+        public Distribuciones<double> distProyC3;
+        public Distribuciones<double> distProyC4;
         Distribuciones<double>[] ProyectoC = new Distribuciones<double>[4];
 
         //Inversion
@@ -159,52 +159,12 @@ namespace TpSimFinal
                         var probabilidad = r.Cells[1].Value;
                         ListProbabilidad.Add(new Probabilidades<double>(Convert.ToDouble(valor), Convert.ToDouble(probabilidad)));
                     }
-
+                    
                     Type type = typeof(Distribuciones<double>);
                     ConstructorInfo ctor = type.GetConstructor(new[] { typeof(List<Probabilidades<double>>) });
                     object instance = ctor.Invoke(new object[] { ListProbabilidad });
-
-                    switch (name)
-                    {
-                        case "ProyA1":
-                            distProyA1 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyA2":
-                            distProyA2 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyA3":
-                            distProyA3 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyA4":
-                            distProyA4 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyB1":
-                            distProyB1 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyB2":
-                            distProyB2 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyB3":
-                            distProyB3 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyB4":
-                            distProyB4 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyC1":
-                            distProyC1 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyC2":
-                            distProyC2 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyC3":
-                            distProyC3 = (Distribuciones<double>)instance;
-                            break;
-                        case "ProyC4":
-                            distProyC4 = (Distribuciones<double>)instance;
-                            break;
-                        default:
-                            break;
-                    }
+                    var h = this.GetType().GetFields().FirstOrDefault(x => x.Name.Contains(name));
+                    h?.SetValue(this, instance);
                 }
             }
         }
