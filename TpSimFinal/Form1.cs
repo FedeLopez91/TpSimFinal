@@ -212,17 +212,21 @@ namespace TpSimFinal
 
             ManejadorSimulacion manejador = new ManejadorSimulacion(ProyectoA, ProyectoB, ProyectoC, Inversion);
 
-            /*dgw_simulacion.DataSource = */
             manejador.Simular(int.Parse(txtNroIteraciones.Text), int.Parse(txtCantMostrar.Text), int.Parse(txtMostrarDesde.Text), int.Parse(txtPresupuesto.Text));
 
             //Seteo la Lista de Vectores del Gestor como Fuente de la Tabla.
             dgvSimulacion.DataSource = manejador.Simulacion;
-            
-            
-            //dgw_simulacion.DataSource = manejador.Info;
 
-            //dgw_simulacion.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
+            dgvSimulacion.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+            var resultado = manejador.getLastItemSimulacion();
+            lblResultadoA.Text = $"Inversion ($): {resultado.InversionMejorProyectoA}" + " -- " +
+                        $"VPN: {resultado.VPNMejorProyectoA}";
+            lblResultadoB.Text = $"Inversion ($): {resultado.InversionMejorProyectoB}" + " -- " +
+                        $"VPN: {resultado.VPNMejorProyectoB}";
+            lblResultadoC.Text = $"Inversion ($): {resultado.InversionMejorProyectoC}" + " -- " +
+                        $"VPN: {resultado.VPNMejorProyectoC}";
             //lblResultado.Text = $"Promedio de Comision de Vendedores: {manejador.Promedio_Vendedores.ToString("C")}" +
             //    "\nComisión promedio de los vendedores en una semana (total): " + manejador.Promedio_Total;
             //lblpromparcial.Text = $"Promedio Vendedor 1: {manejador.Promedio_V1}\n" +

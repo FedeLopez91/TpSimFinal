@@ -1,6 +1,7 @@
 ﻿using SimLib;
 using System.Collections.Generic;
 using System.Data;
+using System.Linq;
 
 namespace Simlib
 {
@@ -61,7 +62,7 @@ namespace Simlib
 
                 vActual.AcumVPN = vActual.VPNProyectoA + vActual.VPNProyectoB + vActual.VPNProyectoC;
 
-                if(vActual.AcumVPN > vAnterior.AcumVPN)
+                if(vActual.AcumVPN > vAnterior.AcumMejorVPN)
                 {
                     vActual.AcumMejorVPN = vActual.AcumVPN;
 
@@ -76,16 +77,16 @@ namespace Simlib
                 }
                 else
                 {
-                    vActual.AcumMejorVPN = vAnterior.AcumVPN;
+                    vActual.AcumMejorVPN = vAnterior.AcumMejorVPN;
 
-                    vActual.InversionMejorProyectoA = vAnterior.InversionProyectoA;
-                    vActual.VPNMejorProyectoA = vAnterior.VPNProyectoA;
+                    vActual.InversionMejorProyectoA = vAnterior.InversionMejorProyectoA;
+                    vActual.VPNMejorProyectoA = vAnterior.VPNMejorProyectoA;
 
-                    vActual.InversionMejorProyectoB = vAnterior.InversionProyectoB;
-                    vActual.VPNMejorProyectoB = vAnterior.VPNProyectoB;
+                    vActual.InversionMejorProyectoB = vAnterior.InversionMejorProyectoB;
+                    vActual.VPNMejorProyectoB = vAnterior.VPNMejorProyectoB;
 
-                    vActual.InversionMejorProyectoC = vAnterior.InversionProyectoC;
-                    vActual.VPNMejorProyectoC = vAnterior.VPNProyectoC;
+                    vActual.InversionMejorProyectoC = vAnterior.InversionMejorProyectoC;
+                    vActual.VPNMejorProyectoC = vAnterior.VPNMejorProyectoC;
                 }
 
                 vAnterior = vActual;
@@ -103,6 +104,11 @@ namespace Simlib
             }
             Simulacion.Add(vAnterior);
 
+        }
+
+        public VectorSimulacion getLastItemSimulacion()
+        {
+            return Simulacion.Last();
         }
     }
 }
