@@ -39,6 +39,7 @@ namespace TpSimFinal
         //Inversion
         Distribuciones<double> Inversion;
 
+
         public Form1()
         {
             InitializeComponent();
@@ -129,9 +130,15 @@ namespace TpSimFinal
 
         private void btnSimular_Click(object sender, EventArgs e)
         {
-            if (!validar())
+            var validacion = validar();
+            if (validacion != null)
             {
-                MessageBox.Show("La Suma de las probabilidades porcentuales debe ser igual a 100");
+                var a = "";
+                foreach (var item in validacion)
+                {
+                    a += item + "\n\t";
+                }
+                MessageBox.Show("La Suma de las probabilidades porcentuales debe ser igual a 100\n Errores en: \n \t" + a);
                 return;
             }
             CreateDistribucionPresupuesto();
@@ -169,10 +176,10 @@ namespace TpSimFinal
             }
         }
 
-        private bool validar()
+        private List<string> validar()
         {
             var dgvParam = gbParametros.Controls.OfType<Panel>().Where(x => x.Name.Contains("pProy"));
-
+            var listError = new List<string>();
             foreach (var item in dgvParam)
             {
                 var a = item.Controls.OfType<DataGridView>();
@@ -185,12 +192,12 @@ namespace TpSimFinal
                         var ab = Convert.ToDecimal(row.Cells[1].Value, new CultureInfo("en-US"));
                         acum += ab;
                     }
-                    if (acum != 1) return false;
+                    if (acum != 1)  listError.Add(name);
 
                     
                 }
             }
-            return true;
+            return listError;
         }
 
         private void Simular()
@@ -216,25 +223,19 @@ namespace TpSimFinal
 
             //Seteo la Lista de Vectores del Gestor como Fuente de la Tabla.
             dgvSimulacion.DataSource = manejador.Simulacion;
+            dgvResultado.DataSource = manejador.ListInversiones;
 
+            var resultInversiones = manejador.ListInversiones.OrderByDescending(x => x.Contador).First();
+            //dgvSimulacion.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
-            dgvSimulacion.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-
-            var resultado = manejador.getLastItemSimulacion();
-            lblResultadoA.Text = $"Inversion ($): {resultado.InversionMejorProyectoA}" + " -- " +
-                        $"VPN: {resultado.VPNMejorProyectoA}";
-            lblResultadoB.Text = $"Inversion ($): {resultado.InversionMejorProyectoB}" + " -- " +
-                        $"VPN: {resultado.VPNMejorProyectoB}";
-            lblResultadoC.Text = $"Inversion ($): {resultado.InversionMejorProyectoC}" + " -- " +
-                        $"VPN: {resultado.VPNMejorProyectoC}";
-            //lblResultado.Text = $"Promedio de Comision de Vendedores: {manejador.Promedio_Vendedores.ToString("C")}" +
-            //    "\nComisión promedio de los vendedores en una semana (total): " + manejador.Promedio_Total;
-            //lblpromparcial.Text = $"Promedio Vendedor 1: {manejador.Promedio_V1}\n" +
-            //    $"Promedio Vendedor 2: {manejador.Promedio_V2}\n" +
-            //    $"Promedio Vendedor 3: {manejador.Promedio_V3}\n" +
-            //    $"Promedio Vendedor 4: {manejador.Promedio_V4}";
-            //TcRSimulacion.SelectTab(TpRSimulacion);
-
+            //var resultado = manejador.getLastItemSimulacion();
+            lblResultadoA.Text = $"Inversion ($): {resultInversiones.InversionProyectoA}" + " -- " +
+                        $"VPN: {resultInversiones.VPNProyectoA}";
+            lblResultadoB.Text = $"Inversion ($): {resultInversiones.InversionProyectoB}" + " -- " +
+                        $"VPN: {resultInversiones.VPNProyectoB}";
+            lblResultadoC.Text = $"Inversion ($): {resultInversiones.InversionProyectoC}" + " -- " +
+                        $"VPN: {resultInversiones.VPNProyectoC}";
+            //lblProbabilidad.Text = (resultInversiones.Contador / int.Parse(txtNroIteraciones.Text)).ToString();
 
         }
 

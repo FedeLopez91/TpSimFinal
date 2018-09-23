@@ -10,6 +10,7 @@ namespace Simlib
         public List<Probabilidades<T>> Valores { get; set; }
         public List<double> intervaloHasta { get; set; }
         public int indice { get; set; }
+
         //Cada Distribucion tiene su cadena de randoms.
         private Random random;
 

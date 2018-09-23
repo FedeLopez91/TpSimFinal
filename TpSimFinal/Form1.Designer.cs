@@ -92,13 +92,17 @@
             this.lblNroIteraciones = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvSimulacion = new System.Windows.Forms.DataGridView();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgvResultado = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblResultadoA = new System.Windows.Forms.Label();
-            this.lblResultadoB = new System.Windows.Forms.Label();
             this.lblResultadoC = new System.Windows.Forms.Label();
+            this.lblResultadoB = new System.Windows.Forms.Label();
+            this.lblResultadoA = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblProbabilidad = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.gbParametros.SuspendLayout();
@@ -122,6 +126,8 @@
             this.groupBox2.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSimulacion)).BeginInit();
+            this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -129,6 +135,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
@@ -733,14 +740,13 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tabPage2.Controls.Add(this.groupBox1);
             this.tabPage2.Controls.Add(this.dgvSimulacion);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1460, 836);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Resultado";
+            this.tabPage2.Text = "Simulación";
             // 
             // dgvSimulacion
             // 
@@ -754,74 +760,119 @@
             this.dgvSimulacion.Size = new System.Drawing.Size(1448, 652);
             this.dgvSimulacion.TabIndex = 0;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox1);
+            this.tabPage3.Controls.Add(this.dgvResultado);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1460, 836);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Resultados";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // dgvResultado
+            // 
+            this.dgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultado.Location = new System.Drawing.Point(15, 128);
+            this.dgvResultado.Name = "dgvResultado";
+            this.dgvResultado.RowTemplate.Height = 24;
+            this.dgvResultado.Size = new System.Drawing.Size(1133, 540);
+            this.dgvResultado.TabIndex = 0;
+            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblProbabilidad);
+            this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.lblResultadoC);
             this.groupBox1.Controls.Add(this.lblResultadoB);
             this.groupBox1.Controls.Add(this.lblResultadoA);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Location = new System.Drawing.Point(6, 6);
+            this.groupBox1.Location = new System.Drawing.Point(15, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(762, 166);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.Size = new System.Drawing.Size(1133, 103);
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resultado";
             // 
-            // label5
+            // lblResultadoC
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 32);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 20);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Proyecto A";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 83);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 20);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Proyecto B";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 125);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 20);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "Proyecto C";
-            // 
-            // lblResultadoA
-            // 
-            this.lblResultadoA.AutoSize = true;
-            this.lblResultadoA.Location = new System.Drawing.Point(103, 32);
-            this.lblResultadoA.Name = "lblResultadoA";
-            this.lblResultadoA.Size = new System.Drawing.Size(13, 20);
-            this.lblResultadoA.TabIndex = 3;
-            this.lblResultadoA.Text = ".";
+            this.lblResultadoC.AutoSize = true;
+            this.lblResultadoC.Location = new System.Drawing.Point(119, 75);
+            this.lblResultadoC.Name = "lblResultadoC";
+            this.lblResultadoC.Size = new System.Drawing.Size(13, 20);
+            this.lblResultadoC.TabIndex = 5;
+            this.lblResultadoC.Text = ".";
             // 
             // lblResultadoB
             // 
             this.lblResultadoB.AutoSize = true;
-            this.lblResultadoB.Location = new System.Drawing.Point(104, 83);
+            this.lblResultadoB.Location = new System.Drawing.Point(119, 49);
             this.lblResultadoB.Name = "lblResultadoB";
             this.lblResultadoB.Size = new System.Drawing.Size(13, 20);
             this.lblResultadoB.TabIndex = 4;
             this.lblResultadoB.Text = ".";
             // 
-            // lblResultadoC
+            // lblResultadoA
             // 
-            this.lblResultadoC.AutoSize = true;
-            this.lblResultadoC.Location = new System.Drawing.Point(104, 125);
-            this.lblResultadoC.Name = "lblResultadoC";
-            this.lblResultadoC.Size = new System.Drawing.Size(13, 20);
-            this.lblResultadoC.TabIndex = 5;
-            this.lblResultadoC.Text = ".";
+            this.lblResultadoA.AutoSize = true;
+            this.lblResultadoA.Location = new System.Drawing.Point(119, 22);
+            this.lblResultadoA.Name = "lblResultadoA";
+            this.lblResultadoA.Size = new System.Drawing.Size(13, 20);
+            this.lblResultadoA.TabIndex = 3;
+            this.lblResultadoA.Text = ".";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(6, 75);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(108, 20);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Proyecto C:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 49);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(108, 20);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Proyecto B:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 22);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(107, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Proyecto A:";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(526, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(119, 20);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Probabilidad:";
+            // 
+            // lblProbabilidad
+            // 
+            this.lblProbabilidad.AutoSize = true;
+            this.lblProbabilidad.Location = new System.Drawing.Point(651, 22);
+            this.lblProbabilidad.Name = "lblProbabilidad";
+            this.lblProbabilidad.Size = new System.Drawing.Size(13, 20);
+            this.lblProbabilidad.TabIndex = 7;
+            this.lblProbabilidad.Text = ".";
             // 
             // Form1
             // 
@@ -864,6 +915,8 @@
             this.groupBox2.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSimulacion)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -936,6 +989,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn21;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridView dgvSimulacion;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGridView dgvResultado;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lblResultadoC;
         private System.Windows.Forms.Label lblResultadoB;
@@ -943,6 +998,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblProbabilidad;
+        private System.Windows.Forms.Label label9;
     }
 }
 

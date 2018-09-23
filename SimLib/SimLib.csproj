@@ -43,6 +43,7 @@
     <Compile Include="ComisionAcumulada.cs" />
     <Compile Include="ComisionTotal.cs" />
     <Compile Include="Distribuciones.cs" />
+    <Compile Include="Inversion.cs" />
     <Compile Include="ManejadorSimulacion.cs" />
     <Compile Include="Probabilidades.cs" />
     <Compile Include="Promedio.cs" />
