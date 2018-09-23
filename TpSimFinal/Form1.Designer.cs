@@ -30,16 +30,12 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvPresupuesto = new System.Windows.Forms.DataGridView();
+            this.gBPresupuesto = new System.Windows.Forms.GroupBox();
+            this.txtPresupuesto = new System.Windows.Forms.TextBox();
+            this.lblPresupuesto = new System.Windows.Forms.Label();
             this.btnSimular = new System.Windows.Forms.Button();
             this.gbParametros = new System.Windows.Forms.GroupBox();
-            this.panelPresupuesto = new System.Windows.Forms.Panel();
-            this.lblCantPres4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblCantPres3 = new System.Windows.Forms.Label();
-            this.lblCantPres2 = new System.Windows.Forms.Label();
-            this.lblCantPres1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtPresupuesto = new System.Windows.Forms.TextBox();
             this.pProyC = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvProyC4 = new System.Windows.Forms.DataGridView();
@@ -93,20 +89,25 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.dgvSimulacion = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.dgvResultado = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblProbabilidad = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.lblResultadoC = new System.Windows.Forms.Label();
             this.lblResultadoB = new System.Windows.Forms.Label();
             this.lblResultadoA = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblProbabilidad = new System.Windows.Forms.Label();
+            this.dgvResultado = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn23 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblCantTotalComb = new System.Windows.Forms.Label();
+            this.lblCantidadTotal = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPresupuesto)).BeginInit();
+            this.gBPresupuesto.SuspendLayout();
             this.gbParametros.SuspendLayout();
-            this.panelPresupuesto.SuspendLayout();
             this.pProyC.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyC4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyC1)).BeginInit();
@@ -127,8 +128,8 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSimulacion)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -140,21 +141,67 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1468, 869);
+            this.tabControl1.Size = new System.Drawing.Size(1468, 898);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tabPage1.Controls.Add(this.gBPresupuesto);
             this.tabPage1.Controls.Add(this.btnSimular);
             this.tabPage1.Controls.Add(this.gbParametros);
             this.tabPage1.Controls.Add(this.gbConfiguracion);
             this.tabPage1.Location = new System.Drawing.Point(4, 29);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1460, 836);
+            this.tabPage1.Size = new System.Drawing.Size(1460, 865);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Parametros";
+            // 
+            // dgvPresupuesto
+            // 
+            this.dgvPresupuesto.AllowUserToAddRows = false;
+            this.dgvPresupuesto.AllowUserToDeleteRows = false;
+            this.dgvPresupuesto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPresupuesto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn23,
+            this.dataGridViewTextBoxColumn24});
+            this.dgvPresupuesto.Location = new System.Drawing.Point(193, 16);
+            this.dgvPresupuesto.Name = "dgvPresupuesto";
+            this.dgvPresupuesto.RowTemplate.Height = 24;
+            this.dgvPresupuesto.Size = new System.Drawing.Size(386, 157);
+            this.dgvPresupuesto.TabIndex = 20;
+            // 
+            // gBPresupuesto
+            // 
+            this.gBPresupuesto.Controls.Add(this.dgvPresupuesto);
+            this.gBPresupuesto.Controls.Add(this.txtPresupuesto);
+            this.gBPresupuesto.Controls.Add(this.lblPresupuesto);
+            this.gBPresupuesto.Location = new System.Drawing.Point(585, 6);
+            this.gBPresupuesto.Name = "gBPresupuesto";
+            this.gBPresupuesto.Size = new System.Drawing.Size(602, 179);
+            this.gBPresupuesto.TabIndex = 3;
+            this.gBPresupuesto.TabStop = false;
+            this.gBPresupuesto.Text = "Presupuesto";
+            // 
+            // txtPresupuesto
+            // 
+            this.txtPresupuesto.Location = new System.Drawing.Point(87, 30);
+            this.txtPresupuesto.Name = "txtPresupuesto";
+            this.txtPresupuesto.Size = new System.Drawing.Size(100, 26);
+            this.txtPresupuesto.TabIndex = 8;
+            this.txtPresupuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarPresupuesto_KeyPress);
+            this.txtPresupuesto.Leave += new System.EventHandler(this.calcularDivisionPresupuesto);
+            // 
+            // lblPresupuesto
+            // 
+            this.lblPresupuesto.AutoSize = true;
+            this.lblPresupuesto.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblPresupuesto.Location = new System.Drawing.Point(15, 33);
+            this.lblPresupuesto.Name = "lblPresupuesto";
+            this.lblPresupuesto.Size = new System.Drawing.Size(55, 20);
+            this.lblPresupuesto.TabIndex = 7;
+            this.lblPresupuesto.Text = "Monto";
             // 
             // btnSimular
             // 
@@ -171,105 +218,15 @@
             // 
             // gbParametros
             // 
-            this.gbParametros.Controls.Add(this.panelPresupuesto);
             this.gbParametros.Controls.Add(this.pProyC);
             this.gbParametros.Controls.Add(this.pProyB);
             this.gbParametros.Controls.Add(this.pProyA);
             this.gbParametros.Location = new System.Drawing.Point(19, 191);
             this.gbParametros.Name = "gbParametros";
-            this.gbParametros.Size = new System.Drawing.Size(1411, 636);
+            this.gbParametros.Size = new System.Drawing.Size(1411, 665);
             this.gbParametros.TabIndex = 1;
             this.gbParametros.TabStop = false;
             this.gbParametros.Text = "Parametros";
-            // 
-            // panelPresupuesto
-            // 
-            this.panelPresupuesto.BackColor = System.Drawing.Color.Gainsboro;
-            this.panelPresupuesto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelPresupuesto.Controls.Add(this.lblCantPres4);
-            this.panelPresupuesto.Controls.Add(this.label8);
-            this.panelPresupuesto.Controls.Add(this.lblCantPres3);
-            this.panelPresupuesto.Controls.Add(this.lblCantPres2);
-            this.panelPresupuesto.Controls.Add(this.lblCantPres1);
-            this.panelPresupuesto.Controls.Add(this.label1);
-            this.panelPresupuesto.Controls.Add(this.txtPresupuesto);
-            this.panelPresupuesto.Location = new System.Drawing.Point(23, 22);
-            this.panelPresupuesto.Name = "panelPresupuesto";
-            this.panelPresupuesto.Size = new System.Drawing.Size(1370, 53);
-            this.panelPresupuesto.TabIndex = 23;
-            // 
-            // lblCantPres4
-            // 
-            this.lblCantPres4.AutoSize = true;
-            this.lblCantPres4.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantPres4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCantPres4.Location = new System.Drawing.Point(1135, 2);
-            this.lblCantPres4.Name = "lblCantPres4";
-            this.lblCantPres4.Size = new System.Drawing.Size(143, 38);
-            this.lblCantPres4.TabIndex = 24;
-            this.lblCantPres4.Text = "2000000";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label8.Location = new System.Drawing.Point(1135, 2);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 38);
-            this.label8.TabIndex = 23;
-            // 
-            // lblCantPres3
-            // 
-            this.lblCantPres3.AutoSize = true;
-            this.lblCantPres3.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantPres3.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCantPres3.Location = new System.Drawing.Point(855, 2);
-            this.lblCantPres3.Name = "lblCantPres3";
-            this.lblCantPres3.Size = new System.Drawing.Size(143, 38);
-            this.lblCantPres3.TabIndex = 22;
-            this.lblCantPres3.Text = "1500000";
-            // 
-            // lblCantPres2
-            // 
-            this.lblCantPres2.AutoSize = true;
-            this.lblCantPres2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantPres2.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCantPres2.Location = new System.Drawing.Point(576, 2);
-            this.lblCantPres2.Name = "lblCantPres2";
-            this.lblCantPres2.Size = new System.Drawing.Size(143, 38);
-            this.lblCantPres2.TabIndex = 21;
-            this.lblCantPres2.Text = "1000000";
-            // 
-            // lblCantPres1
-            // 
-            this.lblCantPres1.AutoSize = true;
-            this.lblCantPres1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantPres1.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lblCantPres1.Location = new System.Drawing.Point(293, 2);
-            this.lblCantPres1.Name = "lblCantPres1";
-            this.lblCantPres1.Size = new System.Drawing.Size(125, 38);
-            this.lblCantPres1.TabIndex = 20;
-            this.lblCantPres1.Text = "500000";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label1.Location = new System.Drawing.Point(15, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(103, 20);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Presupuesto";
-            // 
-            // txtPresupuesto
-            // 
-            this.txtPresupuesto.Location = new System.Drawing.Point(141, 14);
-            this.txtPresupuesto.Name = "txtPresupuesto";
-            this.txtPresupuesto.Size = new System.Drawing.Size(100, 26);
-            this.txtPresupuesto.TabIndex = 8;
-            this.txtPresupuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ValidarPresupuesto_KeyPress);
-            this.txtPresupuesto.Leave += new System.EventHandler(this.calcularDivisionPresupuesto);
             // 
             // pProyC
             // 
@@ -280,9 +237,9 @@
             this.pProyC.Controls.Add(this.dgvProyC1);
             this.pProyC.Controls.Add(this.dgvProyC3);
             this.pProyC.Controls.Add(this.dgvProyC2);
-            this.pProyC.Location = new System.Drawing.Point(23, 449);
+            this.pProyC.Location = new System.Drawing.Point(21, 451);
             this.pProyC.Name = "pProyC";
-            this.pProyC.Size = new System.Drawing.Size(1370, 177);
+            this.pProyC.Size = new System.Drawing.Size(1370, 204);
             this.pProyC.TabIndex = 24;
             // 
             // label4
@@ -298,7 +255,6 @@
             // 
             // dgvProyC4
             // 
-            this.dgvProyC4.AllowUserToAddRows = false;
             this.dgvProyC4.AllowUserToDeleteRows = false;
             this.dgvProyC4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyC4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -307,7 +263,7 @@
             this.dgvProyC4.Location = new System.Drawing.Point(1099, 8);
             this.dgvProyC4.Name = "dgvProyC4";
             this.dgvProyC4.RowTemplate.Height = 24;
-            this.dgvProyC4.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyC4.Size = new System.Drawing.Size(262, 185);
             this.dgvProyC4.TabIndex = 18;
             // 
             // dataGridViewTextBoxColumn13
@@ -324,7 +280,6 @@
             // 
             // dgvProyC1
             // 
-            this.dgvProyC1.AllowUserToAddRows = false;
             this.dgvProyC1.AllowUserToDeleteRows = false;
             this.dgvProyC1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyC1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -333,7 +288,7 @@
             this.dgvProyC1.Location = new System.Drawing.Point(247, 8);
             this.dgvProyC1.Name = "dgvProyC1";
             this.dgvProyC1.RowTemplate.Height = 24;
-            this.dgvProyC1.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyC1.Size = new System.Drawing.Size(262, 185);
             this.dgvProyC1.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn17
@@ -350,7 +305,6 @@
             // 
             // dgvProyC3
             // 
-            this.dgvProyC3.AllowUserToAddRows = false;
             this.dgvProyC3.AllowUserToDeleteRows = false;
             this.dgvProyC3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyC3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -359,7 +313,7 @@
             this.dgvProyC3.Location = new System.Drawing.Point(815, 8);
             this.dgvProyC3.Name = "dgvProyC3";
             this.dgvProyC3.RowTemplate.Height = 24;
-            this.dgvProyC3.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyC3.Size = new System.Drawing.Size(262, 185);
             this.dgvProyC3.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn19
@@ -376,7 +330,6 @@
             // 
             // dgvProyC2
             // 
-            this.dgvProyC2.AllowUserToAddRows = false;
             this.dgvProyC2.AllowUserToDeleteRows = false;
             this.dgvProyC2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyC2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -385,7 +338,7 @@
             this.dgvProyC2.Location = new System.Drawing.Point(531, 8);
             this.dgvProyC2.Name = "dgvProyC2";
             this.dgvProyC2.RowTemplate.Height = 24;
-            this.dgvProyC2.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyC2.Size = new System.Drawing.Size(262, 185);
             this.dgvProyC2.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn21
@@ -409,9 +362,9 @@
             this.pProyB.Controls.Add(this.dgvProyB1);
             this.pProyB.Controls.Add(this.dgvProyB3);
             this.pProyB.Controls.Add(this.dgvProyB2);
-            this.pProyB.Location = new System.Drawing.Point(23, 266);
+            this.pProyB.Location = new System.Drawing.Point(21, 241);
             this.pProyB.Name = "pProyB";
-            this.pProyB.Size = new System.Drawing.Size(1370, 177);
+            this.pProyB.Size = new System.Drawing.Size(1370, 204);
             this.pProyB.TabIndex = 23;
             // 
             // label3
@@ -427,7 +380,6 @@
             // 
             // dgvProyB4
             // 
-            this.dgvProyB4.AllowUserToAddRows = false;
             this.dgvProyB4.AllowUserToDeleteRows = false;
             this.dgvProyB4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyB4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -436,7 +388,7 @@
             this.dgvProyB4.Location = new System.Drawing.Point(1099, 8);
             this.dgvProyB4.Name = "dgvProyB4";
             this.dgvProyB4.RowTemplate.Height = 24;
-            this.dgvProyB4.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyB4.Size = new System.Drawing.Size(262, 185);
             this.dgvProyB4.TabIndex = 18;
             // 
             // dataGridViewTextBoxColumn5
@@ -453,7 +405,6 @@
             // 
             // dgvProyB1
             // 
-            this.dgvProyB1.AllowUserToAddRows = false;
             this.dgvProyB1.AllowUserToDeleteRows = false;
             this.dgvProyB1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyB1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -462,7 +413,7 @@
             this.dgvProyB1.Location = new System.Drawing.Point(247, 8);
             this.dgvProyB1.Name = "dgvProyB1";
             this.dgvProyB1.RowTemplate.Height = 24;
-            this.dgvProyB1.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyB1.Size = new System.Drawing.Size(262, 185);
             this.dgvProyB1.TabIndex = 9;
             // 
             // dataGridViewTextBoxColumn7
@@ -479,7 +430,6 @@
             // 
             // dgvProyB3
             // 
-            this.dgvProyB3.AllowUserToAddRows = false;
             this.dgvProyB3.AllowUserToDeleteRows = false;
             this.dgvProyB3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyB3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -488,7 +438,7 @@
             this.dgvProyB3.Location = new System.Drawing.Point(815, 8);
             this.dgvProyB3.Name = "dgvProyB3";
             this.dgvProyB3.RowTemplate.Height = 24;
-            this.dgvProyB3.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyB3.Size = new System.Drawing.Size(262, 185);
             this.dgvProyB3.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn9
@@ -505,7 +455,6 @@
             // 
             // dgvProyB2
             // 
-            this.dgvProyB2.AllowUserToAddRows = false;
             this.dgvProyB2.AllowUserToDeleteRows = false;
             this.dgvProyB2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyB2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -514,7 +463,7 @@
             this.dgvProyB2.Location = new System.Drawing.Point(531, 8);
             this.dgvProyB2.Name = "dgvProyB2";
             this.dgvProyB2.RowTemplate.Height = 24;
-            this.dgvProyB2.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyB2.Size = new System.Drawing.Size(262, 185);
             this.dgvProyB2.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn11
@@ -538,9 +487,9 @@
             this.pProyA.Controls.Add(this.dgvProyA1);
             this.pProyA.Controls.Add(this.dgvProyA3);
             this.pProyA.Controls.Add(this.dgvProyA2);
-            this.pProyA.Location = new System.Drawing.Point(23, 83);
+            this.pProyA.Location = new System.Drawing.Point(21, 31);
             this.pProyA.Name = "pProyA";
-            this.pProyA.Size = new System.Drawing.Size(1370, 177);
+            this.pProyA.Size = new System.Drawing.Size(1370, 204);
             this.pProyA.TabIndex = 22;
             // 
             // label2
@@ -556,7 +505,6 @@
             // 
             // dgvProyA4
             // 
-            this.dgvProyA4.AllowUserToAddRows = false;
             this.dgvProyA4.AllowUserToDeleteRows = false;
             this.dgvProyA4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyA4.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -565,7 +513,7 @@
             this.dgvProyA4.Location = new System.Drawing.Point(1099, 9);
             this.dgvProyA4.Name = "dgvProyA4";
             this.dgvProyA4.RowTemplate.Height = 24;
-            this.dgvProyA4.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyA4.Size = new System.Drawing.Size(262, 185);
             this.dgvProyA4.TabIndex = 18;
             // 
             // dataGridViewTextBoxColumn15
@@ -582,7 +530,6 @@
             // 
             // dgvProyA1
             // 
-            this.dgvProyA1.AllowUserToAddRows = false;
             this.dgvProyA1.AllowUserToDeleteRows = false;
             this.dgvProyA1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyA1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -591,7 +538,7 @@
             this.dgvProyA1.Location = new System.Drawing.Point(247, 9);
             this.dgvProyA1.Name = "dgvProyA1";
             this.dgvProyA1.RowTemplate.Height = 24;
-            this.dgvProyA1.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyA1.Size = new System.Drawing.Size(262, 185);
             this.dgvProyA1.TabIndex = 9;
             // 
             // vpn
@@ -608,7 +555,6 @@
             // 
             // dgvProyA3
             // 
-            this.dgvProyA3.AllowUserToAddRows = false;
             this.dgvProyA3.AllowUserToDeleteRows = false;
             this.dgvProyA3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyA3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -617,7 +563,7 @@
             this.dgvProyA3.Location = new System.Drawing.Point(815, 9);
             this.dgvProyA3.Name = "dgvProyA3";
             this.dgvProyA3.RowTemplate.Height = 24;
-            this.dgvProyA3.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyA3.Size = new System.Drawing.Size(262, 185);
             this.dgvProyA3.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
@@ -634,7 +580,6 @@
             // 
             // dgvProyA2
             // 
-            this.dgvProyA2.AllowUserToAddRows = false;
             this.dgvProyA2.AllowUserToDeleteRows = false;
             this.dgvProyA2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProyA2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -643,7 +588,7 @@
             this.dgvProyA2.Location = new System.Drawing.Point(531, 9);
             this.dgvProyA2.Name = "dgvProyA2";
             this.dgvProyA2.RowTemplate.Height = 24;
-            this.dgvProyA2.Size = new System.Drawing.Size(262, 157);
+            this.dgvProyA2.Size = new System.Drawing.Size(262, 185);
             this.dgvProyA2.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn3
@@ -744,7 +689,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1460, 836);
+            this.tabPage2.Size = new System.Drawing.Size(1460, 865);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Simulación";
             // 
@@ -753,11 +698,11 @@
             this.dgvSimulacion.AllowUserToAddRows = false;
             this.dgvSimulacion.AllowUserToDeleteRows = false;
             this.dgvSimulacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSimulacion.Location = new System.Drawing.Point(6, 178);
+            this.dgvSimulacion.Location = new System.Drawing.Point(9, 20);
             this.dgvSimulacion.Name = "dgvSimulacion";
             this.dgvSimulacion.ReadOnly = true;
             this.dgvSimulacion.RowTemplate.Height = 24;
-            this.dgvSimulacion.Size = new System.Drawing.Size(1448, 652);
+            this.dgvSimulacion.Size = new System.Drawing.Size(1448, 839);
             this.dgvSimulacion.TabIndex = 0;
             // 
             // tabPage3
@@ -767,22 +712,15 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1460, 836);
+            this.tabPage3.Size = new System.Drawing.Size(1460, 865);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Resultados";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // dgvResultado
-            // 
-            this.dgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResultado.Location = new System.Drawing.Point(15, 128);
-            this.dgvResultado.Name = "dgvResultado";
-            this.dgvResultado.RowTemplate.Height = 24;
-            this.dgvResultado.Size = new System.Drawing.Size(1133, 540);
-            this.dgvResultado.TabIndex = 0;
-            // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblCantTotalComb);
+            this.groupBox1.Controls.Add(this.lblCantidadTotal);
             this.groupBox1.Controls.Add(this.lblProbabilidad);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.lblResultadoC);
@@ -797,6 +735,25 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resultado";
+            // 
+            // lblProbabilidad
+            // 
+            this.lblProbabilidad.AutoSize = true;
+            this.lblProbabilidad.Location = new System.Drawing.Point(651, 22);
+            this.lblProbabilidad.Name = "lblProbabilidad";
+            this.lblProbabilidad.Size = new System.Drawing.Size(13, 20);
+            this.lblProbabilidad.TabIndex = 7;
+            this.lblProbabilidad.Text = ".";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(526, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(119, 20);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Probabilidad:";
             // 
             // lblResultadoC
             // 
@@ -855,24 +812,44 @@
             this.label5.TabIndex = 0;
             this.label5.Text = "Proyecto A:";
             // 
-            // label9
+            // dgvResultado
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(526, 22);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(119, 20);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Probabilidad:";
+            this.dgvResultado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResultado.Location = new System.Drawing.Point(15, 128);
+            this.dgvResultado.Name = "dgvResultado";
+            this.dgvResultado.RowTemplate.Height = 24;
+            this.dgvResultado.Size = new System.Drawing.Size(1280, 731);
+            this.dgvResultado.TabIndex = 0;
             // 
-            // lblProbabilidad
+            // dataGridViewTextBoxColumn23
             // 
-            this.lblProbabilidad.AutoSize = true;
-            this.lblProbabilidad.Location = new System.Drawing.Point(651, 22);
-            this.lblProbabilidad.Name = "lblProbabilidad";
-            this.lblProbabilidad.Size = new System.Drawing.Size(13, 20);
-            this.lblProbabilidad.TabIndex = 7;
-            this.lblProbabilidad.Text = ".";
+            this.dataGridViewTextBoxColumn23.HeaderText = "Monto";
+            this.dataGridViewTextBoxColumn23.Name = "dataGridViewTextBoxColumn23";
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this.dataGridViewTextBoxColumn24.HeaderText = "Prob(%)";
+            this.dataGridViewTextBoxColumn24.Name = "dataGridViewTextBoxColumn24";
+            this.dataGridViewTextBoxColumn24.Width = 75;
+            // 
+            // lblCantTotalComb
+            // 
+            this.lblCantTotalComb.AutoSize = true;
+            this.lblCantTotalComb.Location = new System.Drawing.Point(815, 49);
+            this.lblCantTotalComb.Name = "lblCantTotalComb";
+            this.lblCantTotalComb.Size = new System.Drawing.Size(13, 20);
+            this.lblCantTotalComb.TabIndex = 9;
+            this.lblCantTotalComb.Text = ".";
+            // 
+            // lblCantidadTotal
+            // 
+            this.lblCantidadTotal.AutoSize = true;
+            this.lblCantidadTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadTotal.Location = new System.Drawing.Point(526, 49);
+            this.lblCantidadTotal.Name = "lblCantidadTotal";
+            this.lblCantidadTotal.Size = new System.Drawing.Size(251, 20);
+            this.lblCantidadTotal.TabIndex = 8;
+            this.lblCantidadTotal.Text = "Cantidad Total Combinaicon:";
             // 
             // Form1
             // 
@@ -880,7 +857,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1497, 889);
+            this.ClientSize = new System.Drawing.Size(1497, 913);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -888,9 +865,10 @@
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPresupuesto)).EndInit();
+            this.gBPresupuesto.ResumeLayout(false);
+            this.gBPresupuesto.PerformLayout();
             this.gbParametros.ResumeLayout(false);
-            this.panelPresupuesto.ResumeLayout(false);
-            this.panelPresupuesto.PerformLayout();
             this.pProyC.ResumeLayout(false);
             this.pProyC.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProyC4)).EndInit();
@@ -916,9 +894,9 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSimulacion)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResultado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -938,7 +916,7 @@
         private System.Windows.Forms.TextBox txtMostrarDesde;
         private System.Windows.Forms.GroupBox gbParametros;
         private System.Windows.Forms.TextBox txtPresupuesto;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPresupuesto;
         private System.Windows.Forms.DataGridView dgvProyA2;
         private System.Windows.Forms.DataGridView dgvProyA3;
         private System.Windows.Forms.DataGridView dgvProyA1;
@@ -957,12 +935,9 @@
         private System.Windows.Forms.DataGridView dgvProyB2;
         private System.Windows.Forms.Panel pProyA;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panelPresupuesto;
-        private System.Windows.Forms.Label lblCantPres4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblCantPres3;
-        private System.Windows.Forms.Label lblCantPres2;
-        private System.Windows.Forms.Label lblCantPres1;
+        //private System.Windows.Forms.Label lblCantPres3;
+        //private System.Windows.Forms.Label lblCantPres2;
+        //private System.Windows.Forms.Label lblCantPres1;
         private System.Windows.Forms.Button btnSimular;
         private System.Windows.Forms.DataGridViewTextBoxColumn vpn;
         private System.Windows.Forms.DataGridViewTextBoxColumn prob;
@@ -1000,6 +975,12 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblProbabilidad;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dgvPresupuesto;
+        private System.Windows.Forms.GroupBox gBPresupuesto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn23;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn24;
+        private System.Windows.Forms.Label lblCantTotalComb;
+        private System.Windows.Forms.Label lblCantidadTotal;
     }
 }
 

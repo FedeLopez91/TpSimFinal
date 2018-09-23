@@ -21,7 +21,7 @@ namespace TpSimFinal
         public Distribuciones<double> distProyA3;
         public Distribuciones<double> distProyA4;
         Distribuciones<double>[] ProyectoA = new Distribuciones<double>[4];
-        
+
 
         //Proyecto B
         public Distribuciones<double> distProyB1;
@@ -53,6 +53,7 @@ namespace TpSimFinal
             txtCantMostrar.Text = "1000";
             txtPresupuesto.Text = "2000000";
 
+            CreateDistribucionPresupuesto();
             CreateParamProyectos();
         }
 
@@ -89,24 +90,34 @@ namespace TpSimFinal
             CreateDistribucionPresupuesto();
         }
 
+        private void GenerarDistribucionPresupuesto()
+        {
+            var distribucionInversion = new List<Probabilidades<double>>();
+            var presupuesto = Convert.ToDecimal(this.txtPresupuesto.Text, new CultureInfo("en-US")) / dgvPresupuesto.RowCount;
+
+            foreach (DataGridViewRow r in dgvPresupuesto.Rows)
+            {
+                var valor = r.Cells[0].Value;
+                var probabilidad = r.Cells[1].Value;
+                distribucionInversion.Add(new Probabilidades<double>(Convert.ToDouble(valor), Convert.ToDouble(probabilidad)));
+            }
+
+            this.Inversion = new Distribuciones<double>(distribucionInversion);
+        }
+
         private void CreateDistribucionPresupuesto()
         {
             var distribucionInversion = new List<Probabilidades<double>>();
-            var labels = panelPresupuesto.Controls.OfType<Label>().Where(x => x.Name.Contains("lblCantPres"));
-            var presupuesto = Convert.ToDecimal(this.txtPresupuesto.Text, new CultureInfo("en-US")) / labels.Count();
-            var i = 4;
+            var presupuesto = Convert.ToDecimal(this.txtPresupuesto.Text, new CultureInfo("en-US")) / 4;
+            var j = 4;
             var prob = (double)((decimal)1 / 4);
-            foreach (Control fi in labels)
+            dgvPresupuesto.Rows.Clear();
+
+            for (int i = 1; i <= j; i++)
             {
-                var name = string.Format("lblCantPres{0}", i);
-                if (fi.Name == name)
-                {
-                    fi.Text = string.Format("{0}", presupuesto * i);
-                    distribucionInversion.Add(new Probabilidades<double>(Convert.ToDouble(presupuesto * i), prob));
-                }
-                i--;
+                dgvPresupuesto.Rows.Add(presupuesto * i, prob);
+
             }
-            this.Inversion = new Distribuciones<double>(distribucionInversion);
         }
 
         private void CreateParamProyectos()
@@ -131,7 +142,13 @@ namespace TpSimFinal
         private void btnSimular_Click(object sender, EventArgs e)
         {
             var validacion = validar();
-            if (validacion != null)
+            var valdiacionPresupuesto = validarPresupuesto();
+            if (valdiacionPresupuesto != "")
+            {
+                validacion.Add(valdiacionPresupuesto);
+            }
+
+            if (validacion.Any())
             {
                 var a = "";
                 foreach (var item in validacion)
@@ -141,16 +158,16 @@ namespace TpSimFinal
                 MessageBox.Show("La Suma de las probabilidades porcentuales debe ser igual a 100\n Errores en: \n \t" + a);
                 return;
             }
-            CreateDistribucionPresupuesto();
+            GenerarDistribucionPresupuesto();
             GetdgwProyectos();
 
             Simular();
-           
+
         }
 
         private void GetdgwProyectos()
         {
-            
+
             var dgvParam = gbParametros.Controls.OfType<Panel>().Where(x => x.Name.Contains("pProy"));
 
             foreach (var item in dgvParam)
@@ -160,18 +177,25 @@ namespace TpSimFinal
                 {
                     List<Probabilidades<double>> ListProbabilidad = new List<Probabilidades<double>>();
                     var name = dgv.Name.Substring(3, 6);
+                    //dgv.Rows.RemoveAt(dgv.ColumnCount - 1);
                     foreach (DataGridViewRow r in dgv.Rows)
                     {
                         var valor = r.Cells[0].Value;
                         var probabilidad = r.Cells[1].Value;
-                        ListProbabilidad.Add(new Probabilidades<double>(Convert.ToDouble(valor), Convert.ToDouble(probabilidad)));
+
+                        if (valor != null && probabilidad != null)
+                        {
+
+                            ListProbabilidad.Add(new Probabilidades<double>(Convert.ToDouble(valor), Convert.ToDouble(probabilidad)));
+                        }
+
+
+                        Type type = typeof(Distribuciones<double>);
+                        ConstructorInfo ctor = type.GetConstructor(new[] { typeof(List<Probabilidades<double>>) });
+                        object instance = ctor.Invoke(new object[] { ListProbabilidad });
+                        var h = this.GetType().GetFields().FirstOrDefault(x => x.Name.Contains(name));
+                        h?.SetValue(this, instance);
                     }
-                    
-                    Type type = typeof(Distribuciones<double>);
-                    ConstructorInfo ctor = type.GetConstructor(new[] { typeof(List<Probabilidades<double>>) });
-                    object instance = ctor.Invoke(new object[] { ListProbabilidad });
-                    var h = this.GetType().GetFields().FirstOrDefault(x => x.Name.Contains(name));
-                    h?.SetValue(this, instance);
                 }
             }
         }
@@ -192,12 +216,25 @@ namespace TpSimFinal
                         var ab = Convert.ToDecimal(row.Cells[1].Value, new CultureInfo("en-US"));
                         acum += ab;
                     }
-                    if (acum != 1)  listError.Add(name);
+                    if (acum != 1) listError.Add(name);
 
-                    
+
                 }
             }
             return listError;
+        }
+
+        private string validarPresupuesto()
+        {
+            var error="";
+            var acum = 0.0m;
+            foreach (DataGridViewRow row in dgvPresupuesto.Rows)
+            {
+                var ab = Convert.ToDecimal(row.Cells[1].Value, new CultureInfo("en-US"));
+                acum += ab;
+            }
+            if (acum != 1) error = "Param Presupuesto";
+            return error;
         }
 
         private void Simular()
@@ -226,7 +263,7 @@ namespace TpSimFinal
             dgvResultado.DataSource = manejador.ListInversiones;
 
             var resultInversiones = manejador.ListInversiones.OrderByDescending(x => x.Contador).First();
-            //dgvSimulacion.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvResultado.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
 
             //var resultado = manejador.getLastItemSimulacion();
             lblResultadoA.Text = $"Inversion ($): {resultInversiones.InversionProyectoA}" + " -- " +
@@ -236,6 +273,7 @@ namespace TpSimFinal
             lblResultadoC.Text = $"Inversion ($): {resultInversiones.InversionProyectoC}" + " -- " +
                         $"VPN: {resultInversiones.VPNProyectoC}";
             //lblProbabilidad.Text = (resultInversiones.Contador / int.Parse(txtNroIteraciones.Text)).ToString();
+            lblCantTotalComb.Text =  resultInversiones.Contador.ToString();
 
         }
 
